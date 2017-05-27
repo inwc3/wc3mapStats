@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.4">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Variables" />
+                  <TreeView fx:id="_varsTreeView" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Triggers" />
+                  <TreeView fx:id="_pagesTreeView" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+      <SplitPane HBox.hgrow="ALWAYS">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Detail" />
+                  <TreeView fx:id="_trigTreeView" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</HBox>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="457.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="_mapFileLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" text="&lt;mapName&gt;" />
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <GridPane fx:id="_imgGridPane" gridLinesVisible="true" minHeight="200.0" minWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints percentHeight="50.0" />
+                      <RowConstraints percentHeight="50.0" />
+                    </rowConstraints>
+                     <children>
+                        <VBox style="-fx-background-color: #777777;">
+                           <children>
+                              <Label text="Preview:" />
+                              <Pane fx:id="_previewBox" minHeight="1.0" minWidth="1.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fx:id="_previewView" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <VBox style="-fx-background-color: #777777;" GridPane.columnIndex="1">
+                           <children>
+                              <Label text="Minimap:" />
+                              <Pane fx:id="_minimapBox" minHeight="1.0" minWidth="1.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fx:id="_minimapView" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <VBox style="-fx-background-color: #777777;" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Pathing" />
+                              <Pane fx:id="_pathingBox" minHeight="1.0" minWidth="1.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fx:id="_pathingView" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <VBox style="-fx-background-color: #777777;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Shadow:" />
+                              <Pane fx:id="_shadowBox" minHeight="1.0" minWidth="1.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fx:id="_shadowView" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+                  <VBox prefHeight="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <GridPane gridLinesVisible="true">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Map Name" GridPane.rowIndex="1" />
+                              <Label text="Author" GridPane.rowIndex="2" />
+                              <Label text="Description" GridPane.rowIndex="3" />
+                              <Label fx:id="_mapNameValLabel" text="&lt;mapName&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="_mapAuthorValLabel" text="&lt;author&gt;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Players recommended" GridPane.rowIndex="4" />
+                              <Label fx:id="_playersRecommendedValLabel" text="&lt;playersRecommended&gt;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="_mapDescriptionValLabel" text="&lt;description&gt;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Size / Margins" GridPane.rowIndex="5" />
+                              <Label fx:id="_sizeValLabel" text="&lt;size / margins&gt;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="Base Tileset" GridPane.rowIndex="6" />
+                              <Label fx:id="_baseTilesetValLabel" text="&lt;baseTileset&gt;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label text="Saves Amount / Editor Version" GridPane.rowIndex="7" />
+                              <Label fx:id="_savesAmountValLabel" text="&lt;savesAmount / editorVersion&gt;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="_flagsGrid">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox fx:id="_forcesBox" minWidth="400.0" HBox.hgrow="NEVER">
+               <children>
+                  <Label text="Players:" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="_trigsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="&gt;&gt; Triggers &lt;&lt;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" color="#0099ff" height="70.0" radius="42.0" width="100.0" />
+               </effect>
+            </Button>
+            <Button fx:id="_objModsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="&gt;&gt; ObjMods &lt;&lt;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" color="#0099ff" height="70.0" radius="42.0" width="100.0" />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
